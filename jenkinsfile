@@ -18,9 +18,10 @@ pipeline {
       steps {
         bat '''
         docker rm -f demo-ci-cd || exit 0
-        docker run -d -p 3002:3000 --name demo-ci-cd demo-ci-cd:latest
+        docker run -d -p 3002:3000 --name demo-ci-cd demo-ci-cd
         '''
       }
     }
   }
 }
+
